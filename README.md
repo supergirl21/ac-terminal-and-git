@@ -48,4 +48,4 @@ Empty template for class slides
 
   ### Issues
 
-  meh!
+  Meh!
