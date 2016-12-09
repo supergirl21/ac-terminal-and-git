@@ -28,54 +28,355 @@
 	<div class="reveal">
 		<div class="slides">
 
-			<!-- First slide -->
 			<section>
-				<h1>Class Name</h1>
-				<aside class="notes">
-					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-				</aside>
+				<h2>Learning the Terminal and Git</h2>
 			</section>
 
-			<!-- EXAMPLE SLIDE SECTIONS -->
-			<!-- <section data-background="http://example.com/image.png">
-			<h2>This slide will have a full-size background image.</h2>
-		</section> -->
+			<section>
+				<h2>What is the Terminal?</h2>
+				<p>The terminal is an interface in which you can type and execute text based commands.</p>
+				<p>This is how we access our Command Line Interface (CLI).</p>
+				<p>aka: program like a hacker!</p>
+			</section>
 
-		<!-- <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
-		<h2>Video. Multiple sources can be defined using a comma separated list. Video will loop when the data-background-video-loop attribute is provided and can be muted with the data-background-video-muted attribute.</h2>
-		</section> -->
-		<!-- <section data-background-iframe="https://slides.com">
-		<h2>Embeds a web page as a background. Note that the page won't be interactive.</h2>
-		</section> -->
+			<section>
+				<h2>What is the Terminal?</h2>
+				<img src="images/terminal.png" alt="">
+			</section>
 
-		<!-- <section>
-	    <p class="fragment grow">grow</p>
-	    <p class="fragment shrink">shrink</p>
-	    <p class="fragment fade-out">fade-out</p>
-	    <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-	    <p class="fragment current-visible">visible only once</p>
-	    <p class="fragment highlight-current-blue">blue only once</p>
-	    <p class="fragment highlight-red">highlight-red</p>
-	    <p class="fragment highlight-green">highlight-green</p>
-	    <p class="fragment highlight-blue">highlight-blue</p>
-		</section> -->
+			<section>
+				<h2>Where to find the Terminal?</h2>
+				<ul>
+					<li>Finder</li>
+					<li>Applications</li>
+					<li>Utilities</li>
+				</ul>
+				<p>Click and drag the icon into your dock, then double click to open.</p>
+			</section>
 
-		<!-- <section>
-	    <p class="fragment" data-fragment-index="3">Appears last</p>
-	    <p class="fragment" data-fragment-index="1">Appears first</p>
-	    <p class="fragment" data-fragment-index="2">Appears second</p>
-		</section> -->
+			<section>
+				<h2>Create your project</h2>
+				<p>How to create a file system for your website in your terminal.</p>
+				<ul>
+					<li>ls: List what's in here</li>
+					<li>cd: Change directory</li>
+					<li>mkdir: Make a new directory</li>
+					<li>touch: create or update a file</li>
+					<li>mv: move a file from one place to another (important note!)</li>
+				</ul>
+			</section>
 
-		<!-- CODE EXAMPLE-->
-		<!-- <section>
-    	<pre><code data-trim data-noescape>
-			(def lazy-fib
-			  (concat
-			   [0 1]
-			   <mark>((fn rfib [a b]</mark>
-			        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-		    </code></pre>
-		</section> -->
+			<section> 
+				<h2>Terminal Commands</h2>
+				<ul>
+					<li>The left/right arrow keys let you edit within a command
+					<li>The up/down arrow keys let you select previous commands
+					<li>CTRL+a goes to beginning of command, CTRL+e to the end.
+					<li>The tab auto-completes filenames
+				</ul>
+     		</section>
+    
+			<section>
+				<h2>Task:</h2>
+				<ul>
+					<li>Create a "dev" folder in your main Documents folder</li>
+					<li>Move all of your current code folders from your Desktop to this file</li>
+					<li>Example: mv ~/Desktop/codingPractice ~/Documents/dev</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>GIT</h2>
+			</section>
+
+			<section>
+				<h2>Version Control System</h2>
+				<p>What is it?</p>
+				<ul>
+					<li>A system that keeps records of your changes.</li>
+					<li>Allows for collaborative development</li>
+					<li>Allows you to know who made what changes and when.</li>
+					<li>Allows you to revert any changes and go back to a previous state.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Example Flow</h2>
+				<p>Alice creates this code and commits it as version 0:</p>
+<pre><code class="js" data-trim contenteditable>
+function addTwo(num){
+	return num + 2;
+}
+</code></pre>
+				<p>Alice edits and commits as version 1:</p>
+<pre><code class="js" data-trim contenteditable>
+function addThree(num){
+	return num + 3;
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h2>Example flow 2</h2>
+				<p>Bob pulls the code from version 0 and edits:</p>
+<pre><code class="js" data-trim contenteditable>
+function addTwo(num){
+	if (num === Infinity){
+		alert("Cannot add to infinity!");
+	}
+	return num + 2;
+}
+</code></pre>
+				<p>Bob pulls Alice's changes and it merges them:</p>
+<pre><code class="js" data-trim contenteditable>
+function addThree(num){
+	if (num === Infinity){
+		alert("Cannot add to infinity!");
+	}
+	return num + 3;
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h2>Version Control</h2>
+				<p>Version control systems are categorized as either "centralized" or "distributed"</p>
+				<p><span style="color: yellow">Centralized version control systems </span>are based on the idea that there is a single "central" copy of your project somewhere (probably on a server), and programmers will "commit" their changes to this central copy.</p>
+				<p>In <span style="color: yellow">distributed systems</span>, every developers "clones" a copy of a repository and has the full history of the project on their own hard drive.</p>
+			</section>
+
+			<section>
+				<h2>Centralized vs distributed systems</h2>
+				<img src="images/versioncontrol" alt="">
+			</section>
+
+			<section>
+				<h2>What is Git?</h2>
+				<p>Git is a popular version control system! There are others but this is considered by many to be the best.</p>
+				<p>Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. </p>
+			</section>
+
+			<section>
+				<h2>Goals of Git Design</h2>
+				<ul>
+					<li>Fast--add to you team and code base quickly</li>
+					<li>Each commit has a corresponding hash (it tracks the changes from everyone)</li>
+					<li>Everyone has a local copy of the history of the source code</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Install git	</h2>
+				<a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>
+			</section>
+
+			<section>
+				<h2>How does git work?</h2>
+				<p>It can be complicated at first, but there are a few key concepts. Don't get too worried about the names -- you will get them over time!</p>
+				<p>Important GIT terms in the following slides will be in <span style="color:yellow">yellow</span>.</p>
+				<img src="https://media.tenor.co/images/4d46caa0ab53ae04ce457eba29721f19/raw" alt="">
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Snapshots</span></h2>
+				<ul>
+					<li>The way git keeps track of your code history</li>
+					<li>Essentially records what all your files look like as a given point in time</li>
+					<li>You decide when to take a snapshot and of what files</li>
+					<li>You can do back and visit any snapshot</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Commit</span></h2>
+				<ul>
+					<li>The act of creating a snapshot</li>
+					<li>Can be a noun or a verb ("I committed code" or "I just made a new commit"</li>
+					<li>Essentially, a project is made up of a bunch of commits</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Commit</span></h2>
+				<p>Commits contain three pieces of information.</p>
+				<ol>
+					<li>Information about how the files changed from previously</li>
+					<li>A reference to the commit that came before it (this is called the parent commit)</li>
+					<li>A hashcode name (this will look something like: fb2dec48987dfgdf8798dfg7dfg87dfg79sdsfsdf7sdf78h9n</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
+				<ul>
+					<li>Often called a 'repo'</li>
+					<li>A collection of all the files and the history of all those files</li>
+					<li>Consists of all of your commits</li>
+					<li>Place where all you hard work is stored!</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
+				<ul>
+					<li>Can live on a local machine (aka your computer) or on a remote server (like Github!)</li>
+					<li>The act of copying a repository from a remote server is called <span style="color:yellow">cloning</span></li>
+					<li>Cloning from a remote server allows teams to work together.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
+				<ul>
+					<li>The process of downloading commits that don't exist on your machine from a remote repository is called <span style="color:yellow">pulling</span> changes.</li>
+					<li>The process of adding your local changes to the remote repository is called <span style="color:yellow">pushing</span> changes</li>
+					<p><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>	</p>			</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Branches</span></h2>
+				<ul>
+					<li>All commits in git live on a branch</li>
+					<li>But there can be many many branches</li>
+					<li>The main branch in a project is called the <span style="color:yellow">master </span> branch.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Getting Started</h2>
+				<p>You can create repositories that are version controlled on your own computer. These are called local repositories.</p>
+				<p>The cool thing about distributed systems is that this repo acts the same way as if it were a remote repo.</p>
+			</section>
+
+			<section>
+				<h2>Creating a local repository</h2>
+				<p>When creating a new project on your local machine using git, you will first create a new repository.</p>
+				<p>To use git, we will use the terminal.</p>
+				<p>To begin, open the Terminal, and move to where you want to place your project on your local machine using the 'cd' (change directory) command. </p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:~ laurahackney$ cd Documents
+Lauras-MacBook-Pro:~ laurahackney$ cd dev
+Lauras-MacBook-Pro:~ laurahackney$ mkdir newProject
+Lauras-MacBook-Pro:~ laurahackney$ cd newProject
+</code></pre>	
+			</section>
+
+			<section>
+				<h2>Creating a local repository</h2>
+				<p>To initialize a git repository in the root of the folder, run the git init command.</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git init
+
+Initialized empty Git repository in /Users/laurahackney/Documents/dev/newProject
+</code></pre>
+			</section>
+
+			<section>
+				<h2>Add a new File to the Repo</h2>
+				<p>Go ahead and add a new file to the project by running a touch command.</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ touch index.html
+Lauras-MacBook-Pro:newProject laurahackney$ ls
+</code></pre>
+				<p>Once you have added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit), unless you tell it to.</p>
+				<p>Visual studio code!</p>
+			</section>
+
+			<section>
+				<h2>Git status check</h2>
+				<p>After creating the new file, you can use the git status command to see which files git knows exist.</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git status
+On branch master
+Initial commit
+Untracked files: 
+</code></pre>
+			<p>What is this is saying is, "Hey, we noticed you created a new file, but we aren't going to do anything with it until you tell us to add it."</p>
+			</section>
+
+			<section>
+				<h2>Running a commit</h2>
+				<p>To add a file to a comit, you first need to add it to the <span style="color:yellow">staging environment</span>. To go this, you can use the git add command</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git add index.html 
+</code></pre>
+				<p>Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit!"
+</code></pre>	
+				<p>Check your work with git log</p>
+			</section>
+
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li>git init</li>
+					<li>git add</li>
+					<li>git status</li>
+					<li>git commit -m "text"</li>
+					<li>git log</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Exercises</h2>
+				<p>Look over this one: <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">Setting up a Repo</a></p>
+				<p>We will do this one together. Do the first nine exercises. <a href="https://try.github.io/levels/1/challenges/1">Exercises</a></p>
+				<p>For you to look at later <a href="http://women2.com/2016/02/09/git-101-for-beginners/?hvid=3PXmn9&utm_source=Women+2.0+Mailing+List&utm_campaign=b06f62550e-08-24-15_Weekly_Newsletter&utm_medium=email&utm_term=0_8e8e6a075d-b06f62550e-310404969">Git 101</a></p>
+			</section>
+
+			<section>
+				<h2>Let's make this easier</h2>
+				<img src="images/easy.jpeg" alt="">
+			</section>
+
+			<section>
+				<h2>Sourcetree</h2>
+				<p>Go to sourcetreeapp.com</p>
+				<p>Visual tour and logging in with a Github account</p>
+			</section>
+
+			<section>
+				<h2>Github!</h2>
+				<img src="images/codercat.jpg" alt="">
+			</section>
+
+			<section>
+				<h2>What is Github?</h2>
+				<p>www.github.com</p>
+				<ul>
+					<li>It is the largest web-based git repository hosting service</li>
+					<li>Allows for code collaboration with anyone online</li>
+					<li>Adds a bunch of features like bug tracking!</li>
+					<li>Check out our AnnieCannons github Repo</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Using Remote Repos</h2>
+				<p>To synchronize with a remote repository, first tell Git about it</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git remote add origin git://github.com/username/repo
+</code></pre>
+				<p>To push changes, use git push</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git push origin master
+</code></pre>
+				<p>To pull changes, use git pull</p>
+<pre><code class="js" data-trim contenteditable>
+Lauras-MacBook-Pro:newProject laurahackney$ git pull origin master
+</code></pre>
+				<p>OR! Use sourcetree!!</p>
+			</section>
+
+			<section>
+				<h2>Fork a Repo!</h2>
+			</section>
+
+			<section>
+				<h2>AC Algorithms</h2>
+				<p>Your first pull!</p>
+			</section>
 
 		<!-- Last Slide -->
 		<section style="text-align: left;">
