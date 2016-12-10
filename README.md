@@ -1,34 +1,6 @@
-# ac-class-template
-Empty template for class slides
+# AnnieCannons Introduction to the Terminal, Git, and Github
 
-### Setup
-
-1. Install [Node.js](http://nodejs.org/)
-
-2. Clone the ac-class-templates repository
-   ```sh
-   $ git clone https://github.com/AnnieCannons/ac-class-template.git
-   ```
-
-3. Navigate to the ac-class-templates folder
-   ```sh
-   $ cd ac-class-templates
-   ```
-
-4. Install dependencies
-   ```sh
-   $ npm install
-   ```
-
-5. Serve the presentation and monitor source files for changes
-   ```sh
-   $ npm start
-   ```
-
-6. Open <http://localhost:8000> to view your presentation
-
-   You can change the port by using `grunt serve --port 8001`.
-
+Please enjoy these slides and be sure to check out the ac-algorithms repo for your daily algorithm challenge!
 
   ### More info
 
@@ -45,7 +17,3 @@ Empty template for class slides
     2. Make changes directly to your fork
     3. If there is an existing issue number, tag commits with it
     4. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) to our `gh-pages` branch
-
-  ### Issues
-
-  Meh!
