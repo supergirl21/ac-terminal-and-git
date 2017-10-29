@@ -70,7 +70,7 @@
 
 			<section>
 				<h2>The Current Directory</h2>
-				<p>pwd (Print Working Directory)</p>
+				<p><code>pwd</code> (Print Working Directory)</p>
 				<p>Type it whenever you want to see what directory (folder) you’re in.</p>
 				<p>TRY It!</p>
 			</section>
@@ -115,16 +115,93 @@
 					<li>Root Directory: (/)</li>
 				</ul>
 			</section>
+			<section>
+				<h2>Unix Filesystem</h2>
+				<p>In Unix, files are contained in directories which are organized in an “upside
+down tree” structure like the one shown below. The topmost directory is named “root” and represented by the single character ‘/’ known as the “front slash”.</p>
+				<img src="images/systemPic.png" style="height: 35vh" />
+			</section>
+			<section>
+				<h2>The command for changing directories</h2>
+				<code>cd</code>
+				<p>Without a command line argument, switches to your home directory no matter where you are in the file system.</p>
+				
+			</section>
+			<section>
+				<h2>Changing Directories</h2>
+				<ul>
+					<li><code>cd <span style="color:red;">&lt;relative path&gt;</span></code></li>
+					<li><code>cd <span style="color:red;">&lt;absolute path&gt;</span></code></li>
+					<li><code>cd <span style="color:red;">&lt;symbolic path&gt;</span></code></li>
+				</ul>
+				<ul>
+					<li class="fragment" style="list-style-type: none;"> -> <code>cd ../exampleDir</code></li>
+					<li class="fragment" style="list-style-type: none;"> -> <code>cd /exampleDir</code></li>
+					<li class="fragment" style="list-style-type: none;"> -> <code>cd ~/exampleDir</code></li>
+				</ul>
+			</section>
+		
+			<section>
+				<h2>Practice I</h2>
+				<img src="images/systemPic.png" style="height: 40vh" />
+				<div style="font-size: .5em">
+				<table>
+					<tr>
+						<td width="20%">current working directory</td>
+						<td width="20%">cd command using absolute path</td>
+						<td width="20%">cd command using relative path</td>
+						<td width="20%">new working directory</td>
+					</tr>
+					<tr>
+						<td>/home/bob</td>
+						<td class="fragment"><pre style="font-size:1em" >cd /home/bob/class</pre></td>
+						<td class="fragment"><pre style="font-size:1em" >cd ./class</pre></td>
+						<td>/home/bob/class</td>
+					</tr>
+				</table>
+				<aside class="notes"> </aside>
+				</div>
+				
+			</section>
+			<section>
+				<h2>Practice II</h2>
+				<img src="images/systemPic.png" style="height: 40vh" />
+				<div style="font-size: .5em">
+				<table>
+					<tr>
+						<td width="20%">current working directory</td>
+						<td width="20%">cd command using absolute path</td>
+						<td width="20%">cd command using relative path</td>
+						<td width="20%">new working directory</td>
+					</tr>
+					<tr>
+						<td>/home/bob</td>
+						<td class="fragment"><pre style="font-size:1em" >cd /home/mary/temp</pre></td>
+						<td class="fragment"><pre style="font-size:1em">cd ../mary/temp</pre></td>
+						<td>/home/mary/temp</td>
+					</tr>
+				</table>
+				</div>
+				
+			</section>
+			<section>
+				<h2>Unix Filesystem Exercises</h2>
+				<img src="images/systemPic.png" style="height: 40vh" />
+				<div style="font-size: .5em">
+				<p>Fun worksheet on how to change directories <a href="https://docs.google.com/a/anniecannons.com/document/d/1qhXuCr2DIypECpMxAB6ZjgYPB3Wv05fKrkXxXMr9K1k/edit?usp=sharing">here.</a></p>
+				</div>
+				
+			</section>
 
 			<section>
 				<h2>Create your project</h2>
 				<p>How to create a file system for your website in your terminal.</p>
 				<ul>
-					<li class="fragment">ls: List what's in here</li>
-					<li class="fragment">cd: Change directory</li>
-					<li class="fragment">mkdir: Make a new directory</li>
-					<li class="fragment">touch: create or update an existing file's timestamp.The touch command expects the name of your new file as an argument.</li>
-					<li class="fragment">mv: move a file from one place to another (important note!)</li>
+					<li class="fragment"><code>ls</code>: List what's in here</li>
+					<li class="fragment"><code>cd</code>: Change directory</li>
+					<li class="fragment"><code>mkdir</code>: Make a new directory</li>
+					<li class="fragment"><code>touch</code>: create or update an existing file's timestamp.The touch command expects the name of your new file as an argument.</lZZi>
+					<li class="fragment"><code>mv</code>: move a file from one place to another (important note!)</li>
 				</ul>
 			</section>
 
@@ -133,8 +210,8 @@
 				<p>Some commands have additional options that you can specify by using flags.</p>
 				<p>Flags are preceded by a hyphen, and are often a single character.</p>
 				<img src="images/ls.png" alt="">
-				<p>ls -a = show hidden files</p>
-				<p>ls -l = use a “long list” format (shows more verbose output)</p>
+				<p><code>ls -a</code> = show hidden files</p>
+				<p><code>ls -l</code> = use a “long list” format (shows more verbose output)</p>
 			</section>
 
 			<section> 
@@ -149,9 +226,9 @@
 
 			 <section>
 				 <h2>Making and Removing Directories</h2>
-				 <p>Use the mkdir command to create a new empty directory.</p>
-				 <p>Use the rmdir command to remove an empty directory.</p>
-				 <p>Use rm -r to remove a non-empty directory...be careful!</p>
+				 <p>Use the <code>mkdir</code> command to create a new empty directory.</p>
+				 <p>Use the <code>rmdir</code> command to remove an empty directory.</p>
+				 <p>Use <code>rm -r</code> to remove a non-empty directory...be careful!</p>
 				 <p>All 3 commands expect the name of a directory as an argument.</p>
 			 </section>
     
@@ -177,11 +254,11 @@
 			<section>
 				<h2>View a File</h2>
 				<p>cat, more, less</p>
-				<p>Use the cat command to output (catenate) the contents of a file to the console.</p>
+				<p>Use the <code>cat</code> command to output (catenate) the contents of a file to the console.</p>
 				<p>Use the more or less commands to read a file:</p>
 					<ul>
-						<li>more allows you to step through the contents of a file a screen at a time</li>
-						<li>less allows you to step backwards or forwards</li>
+						<li><code>more</code> allows you to step through the contents of a file a screen at a time</li>
+						<li><code>less</code> allows you to step backwards or forwards</li>
 						<li>Press q to exit out of this mode</li>
 					</ul>
 			</section>
@@ -194,11 +271,17 @@
 			<section>
 				<h2>Edit a File</h2>
 				<p>You can use various editors built into bash:</p>
-				<ul>
-					<li>$ vi myfile.txt</li>
-					<li>$ emacs myfile.txt</li>
-					<li>$ pico myfile.txt</li>
-				</ul>
+				
+<pre><code>
+$ vi myfile.txt
+</code></pre>
+<pre><code>
+$ emacs myfile.txt
+</code></pre>
+<pre><code>
+$ pico myfile.txt
+</code></pre>
+				
 				<p>Or on a Mac, you can open with any desktop app:</p>
 <pre><code>
 $ open -a TextEdit myfile.txt
@@ -214,7 +297,6 @@ $ open -t myfile.txt
 				<ul>
 					<li>ping</li>
 					<li>traceroute</li>
-					<li></li>
 				</ul>
 			</section>
 
