@@ -159,7 +159,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 						<td>/home/bob/class</td>
 					</tr>
 				</table>
-				<aside class="notes"> </aside>
+				<aside class="notes"> The answers fill in as you click right.</aside>
 				</div>
 				
 			</section>
@@ -237,7 +237,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 				<ul>
 					<li>Create a "dev" folder in your main Documents folder</li>
 					<li>Move all of your current code folders from your Desktop to this file</li>
-					<li>Example: mv ~/Desktop/codingPractice ~/Documents/dev</li>
+					<li>Example: <br/><pre><code>$ mv  ~/Desktop/codingPractice  ~/Documents/dev</code></pre></li>
 				</ul>
 			</section>
 
@@ -253,7 +253,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 
 			<section>
 				<h2>View a File</h2>
-				<p>cat, more, less</p>
+				<p><code>cat</code>, <code>more</code>, <code>less</code></p>
 				<p>Use the <code>cat</code> command to output (catenate) the contents of a file to the console.</p>
 				<p>Use the more or less commands to read a file:</p>
 					<ul>
@@ -265,7 +265,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 
 			<section>
 				<h2>Try this!</h2>
-				<p>cat /var/log/wifi.log </p>
+				<p><code>cat /var/log/wifi.log</code></p>
 			</section>
 
 			<section>
@@ -298,6 +298,104 @@ $ open -t myfile.txt
 					<li>ping</li>
 					<li>traceroute</li>
 				</ul>
+			</section>
+
+			<section>
+				<h2>File Permissions</h2>
+				<ul>
+					<li>In Unix, files and directories are protected from inadvertent or malicious misuse by assigning
+						“permissions”. The available permissions are:</li>
+						<ul>
+							<li>read</li>
+							<li>write</li>
+							<li>execute</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<h2>Where can I see permissions?</h2>
+				<p>The command <code>ls -l</code> followed by a filename</p> 
+				<pre><code>$ ls -l filename.txt</code></pre>
+				<p>or a path to a file and its file name</p>
+				 <pre><code>$ ls -l /usr/bin/uniq</code></pre>
+				<p>display the permissions for a file.</p>
+			</section>
+
+			<section>
+				<h2>File Status</h2>
+				<p>When the status of the file or directory is displayed, the permissions are represented by the letters ‘r’,
+						‘w’ and ‘x’ representing read, write and execute permission, respectively. A dash, ‘-‘, is used to indicate
+						that a permission has not been granted. The user’s permissions are always listed first, then group and then other.</p>
+						<pre><code>$ ls -l message.txt</code></pre>
+						<pre><code>$ rwxr-x-w-	message.txt</code></pre>
+						<aside class="notes">Make sure to explain what the permissions for user, group and other and explain what each of these reprsent.</aside>
+
+			</section>
+			<section>
+				<h2>Fun with Permissions </h2>
+				<p>Go <a href="https://docs.google.com/a/anniecannons.com/document/d/12192q90oaIC6g6IvEurbOW7CWB88Wk4j88Qe78MhBWQ/edit?usp=sharing">here</a> and do the exercise on permissions.</P>
+			</section>
+			<section>
+				<h2>Permission values</h2>
+				<p>Setting the permissions of a file or directory can be accomplished
+						with <code>chmod</code>which uses numbers to represent the permissions.
+					<ul> 
+						<li>4 = read permission</li>
+						<li>2 = write permission </li>
+						<li>1 = execute permission</li> 
+						<li>0 = no permissions</li>
+					</ul>
+
+					<aside class="notes">Take the students back to the exercise and see if they can derive by looking at the octal numbers they wrote in the previous exercise why the values exist for the corresponding premissions.</aside>
+
+			</section>
+			<section>
+				<h2>Setting permissions</h2>
+				<p>The values of the desired permissions are added together and one digit is
+						used for each of user, group and others. The octal number created is 
+					first command line argument to <code>chmod</code> and the filename is the second.</p> 
+				
+				
+				<pre><code>chmod 765 prog.exe</code></pre>
+				<p class="fragment">What are the permissions for the previous command?</p>
+
+			</section>
+			<section>
+				<h2>More fun with Permissions</h2>
+				<p>What are the appropriate <code>chmod</code> commands for the following?</p>
+				<ul style="font-size:0.75em">
+					<li class="fragment">Set read, write and execute permissions for the user, group and others for a directory
+							named <code>temp</code>.</li>
+					<li class="fragment">Set read and execute permissions for the user, execute permission for the group and no
+						permissions for others for a file named <code>students.txt</code>.</li>
+					<li class="fragment">Set the read and execute permissions for the user and group and read permission for others
+							for a file named <code>grades.txt</code>.</li>
+					<li class="fragment">Set execute permission for user, group and others for a directory named <code>mailbox</code>.</li>
+					<li class="fragment">Set only write permission for the user on a file named <code>assignments.txt</code>.</li>
+				</ul>
+				<aside class="notes">chmod 777 temp, chmod 510 students.txt, chmod 554 grades.txt, chmod 111 mailbox, chmod 200 assignments.txt.</aside>
+			</section>
+			<section>
+				<h2>So what do these permissions mean?</h2>
+				<p>The previous permissions had not significant meaning and were mostly to teach a concept. Permissions for files and directories mean different things</p>
+				<table>
+					<tr>
+						<th></th><th>Files</th><th>Directories</th>
+					</tr>
+					<tr>
+						<th>Read</th><td>View</td><td>List</td>
+					</tr>
+					<tr>
+						<th>Write</th><td>Edit</td><td>Modify</td>
+					</tr>
+					<tr>
+						<th>Execute</th><td>Run</td><td><code>cd</code> into</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Even More Fun with Permissions</h2>
+				<p>Now let's try more permissions and determine which are meaningful <a href="https://docs.google.com/a/anniecannons.com/document/d/16UQvSkX31XNxFg19RnacamU6bRWUVFHJMnvWXYNWmIQ/edit?usp=sharing">here</a>.</p>
 			</section>
 
 			<section>
