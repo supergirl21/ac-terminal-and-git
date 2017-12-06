@@ -48,7 +48,7 @@
 
 			<section>
 				<h2>What is the Terminal?</h2>
-				<img src="images/terminal.png" alt="">
+				<img src="images/terminal.png" alt="Terminal Image">
 			</section>
 
 			<section>
@@ -62,10 +62,22 @@
 			</section>
 
 			<section>
+				<h2>Why Use the Terminal?</h2>
+				<ul>
+					<li class="fragment">Automate file actions with a script</li>
+					<li class="fragment">Serve a local directory for testing</li>
+					<li class="fragment">Use version control (like Git)</li>
+					<li class="fragment">Run open source projects</li>
+					<li class="fragment">Use automated build tools</li>
+					<li class="fragment">Control other computers</li>
+				</ul>
+			</section>
+
+			<section>
 				<h2>The Prompt</h2>
 				<p>Usually shows your username and computer name (hostname).</p>
 				<p>It indicates that the shell is ready for you to enter a command.</p>
-				<img src="images/prompt.png" alt="">
+				<img src="images/prompt.png" alt="Terminal Prompt">
 			</section>
 
 			<section>
@@ -84,23 +96,25 @@
 			<section>
 				
 				<h2>UNIX File System</h2>
-				<img src="images/unix.png" alt="">
+				<img src="images/unix.png" alt="Unix File System">
 				<p>In OS X, /home/you becomes /Users/you</p>
 			</section>
+
 			<section>
 				<h2>Server OS</h2>
-				<img src="images/unixtree.png" alt="">
+				<img src="images/unixtree.png" alt="History of Servers">
 			</section>
+
 			<section>
 				<h2>File System Structure</h2>
 				<p>Varies between systems, but some common folders:</p>
 				<ul>
-					<li>/bin: Basic commands</li>
-					<li>/etc: System config files</li>
-					<li>/tmp: Temporary files</li>
-					<li>/usr: Regular user tools</li>
-					<li>/usr/local: Installed user software</li>
-					<li>/var: Data used by system</li></li>
+					<li class="fragment">/bin: Basic commands</li>
+					<li class="fragment">/etc: System config files</li>
+					<li class="fragment">/tmp: Temporary files</li>
+					<li class="fragment">/usr: Regular user tools</li>
+					<li class="fragment">/usr/local: Installed user software</li>
+					<li class="fragment">/var: Data used by system</li></li>
 				</ul>
 			</section>
 			<section>
@@ -121,7 +135,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 			</section>
 			<section>
 				<h2>The command for changing directories</h2>
-				<code >cd</code>
+				<code>cd</code>
 				<p>Without a command line argument (CLA), <code>cd</code> switches to your home directory no matter where you are in the file system.  
 					A CLA is the list of words that proceed the command. 
 				</p>
@@ -130,9 +144,9 @@ down tree” structure like the one shown below. The topmost directory is named 
 			<section>
 				<h2>Changing Directories</h2>
 				<ul>
-					<li><code>cd <span style="color:red;">&lt;relative path&gt;</span></code></li>
-					<li><code>cd <span style="color:red;">&lt;absolute path&gt;</span></code></li>
-					<li><code>cd <span style="color:red;">&lt;symbolic path&gt;</span></code></li>
+					<li><code>cd <span style="color:yellow;">&lt;relative path&gt;</span></code></li>
+					<li><code>cd <span style="color:yellow;">&lt;absolute path&gt;</span></code></li>
+					<li><code>cd <span style="color:yellow;">&lt;symbolic path&gt;</span></code></li>
 				</ul>
 				<ul>
 					<li class="fragment" style="list-style-type: none;"> -> <code>cd ../exampleDir</code></li>
@@ -316,6 +330,7 @@ $ open -t myfile.txt
 						</ul>
 				</ul>
 			</section>
+
 			<section>
 				<h2>Where can I see permissions?</h2>
 				<p>The command <code>ls -l</code> followed by a filename</p> 
@@ -327,54 +342,62 @@ $ open -t myfile.txt
 
 			<section>
 				<h2>File Status</h2>
-				<p>When the status of the file or directory is displayed, the permissions are represented by the letters ‘r’,
-						‘w’ and ‘x’ representing read, write and execute permission, respectively. A dash, ‘-‘, is used to indicate
-						that a permission has not been granted. The user’s permissions are always listed first, then group and then other.</p>
-						<pre><code contenteditable>$ ls -l message.txt</code></pre>
-						<pre><code contenteditable>rwxr-x-w-	message.txt   ...</code></pre>
-						<pre><code contenteditable>$</code></pre>
-						<aside class="notes">Make sure to explain what the permissions for user, group and other and explain what each of these reprsent.</aside>
+				<p>When the status of the file or directory is displayed, the permissions are represented by the letters ‘r’, ‘w’ and ‘x’ representing read, write and execute permission, respectively. 
+			</section>
+
+			<section>
+				<h2>File Status</h2>
+					<p>A dash, ‘-‘, is used to indicate that a permission has not been granted. The user’s permissions are always listed first, then group and then other.</p>
+<pre><code contenteditable>$ ls -l message.txt</code></pre>
+<pre><code contenteditable>rwxr-x-w-	message.txt   ...</code></pre>
+				<aside class="notes">Make sure to explain what the permissions for user, group and other and explain what each of these reprsent.</aside>
 
 			</section>
+
+			<section>
+				<h2>Permissions</h2>
+				<ul>
+					<li class="fragment"><span style="color:yellow;">User permissions</span> − Determines what actions the owner of the file can perform on the file.</li>
+					<li class="fragment"><span style="color:yellow;">Group permissions</span> − Determines what actions a user, who is a member of the group that a file belongs to, can perform on the file.</li>
+					<li class="fragment"><span style="color:yellow;">Other (world) permissions</span> − Indicate what action all other users can perform on the file.</li>
+				</ul>
+				<a class="fragment" href="https://www.tutorialspoint.com/unix/unix-file-permission.htm">Learn more here</a>
+			</section>
+
 			<section>
 				<h2>Fun with Permissions </h2>
 				<p>Go <a href="https://docs.google.com/a/anniecannons.com/document/d/12192q90oaIC6g6IvEurbOW7CWB88Wk4j88Qe78MhBWQ/edit?usp=sharing">here</a> and do the exercise on permissions.</P>
 			</section>
 			<section>
 				<h2>Permission values</h2>
-				<p>Setting the permissions of a file or directory can be accomplished
-						with <code>chmod</code>which uses numbers to represent the permissions.
-					<ul> 
-						<li>4 = read permission</li>
-						<li>2 = write permission </li>
-						<li>1 = execute permission</li> 
-						<li>0 = no permissions</li>
-					</ul>
+				<p>Setting the permissions of a file or directory can be accomplished with <code>chmod</code> which uses numbers to represent the permissions.
+				<ul> 
+					<li>4 = read permission</li>
+					<li>2 = write permission </li>
+					<li>1 = execute permission</li> 
+					<li>0 = no permissions</li>
+				</ul>
 
-					<aside class="notes">Take the students back to the exercise and see if they can derive by looking at the octal numbers they wrote in the previous exercise why the values exist for the corresponding premissions.</aside>
-
+				<aside class="notes">Take the students back to the exercise and see if they can derive by looking at the octal numbers they wrote in the previous exercise why the values exist for the corresponding premissions.</aside>
 			</section>
+
 			<section>
 				<h2>Setting permissions</h2>
-				<p>The values of the desired permissions are added together and one digit is
-						used for each of user, group and others. The octal number created is 
-					first command line argument to <code>chmod</code> and the filename is the second.</p> 
-				
-				
-				<pre><code>$ chmod 765 prog.exe</code></pre>
+				<p>The values of the desired permissions are added together and one digit is used for each of user, group and others. The octal number created is first command line argument to <code>chmod</code> and the filename is the second.</p> 
+<pre><code>$ chmod 765 prog.exe</code></pre>
 				<p class="fragment">What are the permissions for the previous command?</p>
-
 			</section>
+
 			<section>
 				<h2>More fun with Permissions</h2>
 				<p>What are the appropriate <code>chmod</code> commands for the following?</p>
 				<ul style="font-size:0.75em">
-					<li class="fragment">Set read, write and execute permissions for the user, group and others for a directory
-							named <code>temp</code>.</li>
-					<li class="fragment">Set read and execute permissions for the user, execute permission for the group and no
-						permissions for others for a file named <code>students.txt</code>.</li>
+					<li class="fragment">Set read, write and execute permissions for the user, group and others for a directory named <code>temp</code>.
+					</li>
+					<li class="fragment">Set read and execute permissions for the user, execute permission for the group and no permissions for others for a file named <code>students.txt</code>.</li>
 					<li class="fragment">Set the read and execute permissions for the user and group and read permission for others
-							for a file named <code>grades.txt</code>.</li>
+					for a file named <code>grades.txt</code>.
+					</li>
 					<li class="fragment">Set execute permission for user, group and others for a directory named <code>mailbox</code>.</li>
 					<li class="fragment">Set only write permission for the user on a file named <code>assignments.txt</code>.</li>
 				</ul>
@@ -412,6 +435,8 @@ $ open -t myfile.txt
 			</section>
 			<!-- End section of File Permissions -->
 			<!-- Begin Section on Piping by @ladycode -->
+
+			<!-- RETURN TO
 			<section>
 				<h2>Back to Commands</h2>
 				<p>You have already learned several commands. Some have switches which cause the command to behave differently.</p>
@@ -477,31 +502,40 @@ $ open -t myfile.txt
 				<h2>Piping Exercises</h2>
 				<p>Let's have some fun with pipes and filters <a href="https://docs.google.com/a/anniecannons.com/document/d/1KZNn3o0NNYqDOu7e1gztrXwzLK7BJBFq29W2lSwWXt4/edit?usp=sharing">here</a>.</p>
 			</section>
+		-->
 			<!-- End of section on piping -->
 			<!--Begin section on working remotely with ssh and scp by @ladycode -->
+			
+			<!-- Create a new curriculum module: advanced command line and ssh -->
+			
+			<!--
 			<section>
 				<h2>Working Remotely</h2>
 				<p>Thus far, you have been working locally.  All the information you have gathered has been on your machine. What if you need to get information about another machine.
 				 It's time to enter the world of hacking and learn how you can log into your machine from another machine.</p> 
 				 <p>For this part, you will need to work with a partner.</p>
 			</section>
+
 			<section>
 				<h2>Frontend vs. Backend for User</h2>
 				<img width="70%" src="images/comicalfrontandbackend.jpeg" />
 			</section>
+
 			<section>
 				<h2>Frontend vs. Backend for Developer</h2>
 				<img src="images/backandfrontend.jpeg" />
 			</section>
+
 			<section>
 				<h2>Client Server Model</h2>
-				<img src="images/client-server.png" />
-				
+				<img src="images/client-server.png" />	
 			</section>
+
 			<section>
 				<h2>Starting Your File and Secure Servers</h2>
 				<p>To better understand the Client Server model, you and your partner will set up two servers on one of your machines. You must be on the same Wifi network and follow the instructions <a href="http://bfy.tw/F59s" target="_blank">here</a> for setting up a server.  </p><p>Check off the File Sharing and the Remote Login to turn on the file and ssh server processes on the selected server machine.</p> <p>Write down the URL in the top of the dialog window that ends in *.local</p>
 			</section>
+
 			<section>
 				<h2>Connecting to a Remote Machine</h2>
 				<p><code>ssh</code> stands for Secure Shell. <code>ssh</code> is the secure way to connect to your partner's machine.  Depending on the user permissions, <code>ssh</code> will allow you to attempt to run all of the commands we have learned remotely. Type the following command to connect replacing the variables with your username and server URL respectively.</p>
@@ -525,7 +559,7 @@ $ open -t myfile.txt
 <pre><code>$ scp localfile &lt;username&gt;@&lt;urlOfRemoteServer&gt;</code></pre>
 <pre><code>$ scp &lt;username&gt;@&lt;urlOfRemoteServer&gt;:directory/remotefile .</code></pre>
 			</section>
-			<!-- I hope you guys enjoyed my contributions!  Best, @ladycode -->
+			 I hope you guys enjoyed my contributions!  Best, @ladycode -->
 
 			<section>
 				<h2>GIT</h2>			
