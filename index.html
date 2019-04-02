@@ -110,17 +110,23 @@
 				<p>Containers for files or other directories.</p>
 				<p>Also referred to as "folders".</p>
 				<p>Nested files and directories can be referenced using paths.</p>
-			</section>		
-			<section>
-				
-				<h2>UNIX File System</h2>
-				<img src="images/unix.png" alt="Unix File System">
-				<p>In OS X, /home/you becomes /Users/you</p>
 			</section>
-
+			
 			<section>
 				<h2>Server OS</h2>
 				<img src="images/unixtree.png" alt="History of Servers">
+			</section>
+
+			<section>
+				<h2>UNIX File System</h2>
+				<p>You don't need to be an expert on the UNIX system, but it is helpful to have a deeper understanding of how your computer is configured.</p>
+				<p>It will also help you get out of trouble in your Terminal!</p>
+			</section>
+
+			<section>	
+				<h2>UNIX File System</h2>
+				<img src="images/unix.png" alt="Unix File System">
+				<p>In OS X, /home/you becomes /Users/you</p>
 			</section>
 
 			<section>
@@ -135,15 +141,7 @@
 					<li class="fragment">/var: Data used by system</li></li>
 				</ul>
 			</section>
-			<section>
-				<h2>Shortcuts</h2>
-				<ul>
-					<li>Current Directory: (.)</li>
-					<li>Parent Directory: (..)</li>
-					<li>Home Directory: (~)</li>
-					<li>Root Directory: (/)</li>
-				</ul>
-			</section>
+
 			<!--UNIX File System contributions by author is @patti_ordonez begin here -->
 			<section>
 				<h2>Unix Filesystem</h2>
@@ -216,15 +214,26 @@ down tree” structure like the one shown below. The topmost directory is named 
 				</div>
 				
 			</section>
-			<section>
+			<!-- <section>
 				<h2>UNIX File System Exercises</h2>
 				<img src="images/systemPic.png" style="height: 40vh" />
 				<div style="font-size: .5em">
-				 <!-- <p>Fun worksheet on how to change directories <a href="https://docs.google.com/a/anniecannons.com/document/d/1qhXuCr2DIypECpMxAB6ZjgYPB3Wv05fKrkXxXMr9K1k/edit?usp=sharing">here.</a></p> -->
+				 <p>Fun worksheet on how to change directories <a href="https://docs.google.com/a/anniecannons.com/document/d/1qhXuCr2DIypECpMxAB6ZjgYPB3Wv05fKrkXxXMr9K1k/edit?usp=sharing">here.</a></p> 
 				</div>
 				
-			</section>
+			</section> -->
 	<!-- end section of UNIX File System -->
+
+			<section>
+				<h2>Understanding Paths</h2>
+				<ul>
+					<li>Current Directory: (.)</li>
+					<li>Parent Directory: (..)</li>
+					<li>Home Directory: (~)</li>
+					<li>Root Directory: (/)</li>
+				</ul>
+			</section>
+
 			<section>
 				<h2>Common Commands</h2>
 				<p>How to create a file system for your website in your terminal.</p>
@@ -274,9 +283,10 @@ down tree” structure like the one shown below. The topmost directory is named 
 					<li>Make sure to add folders for your CSS and JS</li>
 					<li>Add a new index.html file</li>
 				</ul>
+				<img src="images/exercise.gif" alt="Exercise time" />
 			</section>
 
-			<section>
+			<!-- <section>
 				<h2>View a File</h2>
 				<p><code>cat</code>, <code>more</code>, <code>less</code></p>
 				<p>Use the <code>cat</code> command to output (concatenate) the contents of a file to the console.</p>
@@ -325,13 +335,13 @@ $ open -t myfile.txt
 					<li><code>ps -A</code></li>
 					<li><code>users</code></li>
 				</ul>
-			</section>
+			</section> -->
 
-			<section>
+			<!-- <section>
 				<h2>Review</h2>
 				<p>What is the command line?</p>
 			</section>
-			<!-- Begin Section of File Permissions by @ladycode -->
+			 Begin Section of File Permissions by @ladycode 
 			<section>
 				<h2>File Permissions</h2>
 				<ul>
@@ -444,13 +454,13 @@ $ open -t myfile.txt
 				<h2>Resources</h2>
 				<ul>
 					<li><a href="https://code.tutsplus.com/tutorials/how-to-customize-the-command-prompt--net-20586">How to Customize the Command Prompt</a></li>
-					<!-- <li><a href="https://learncodethehardway.org/unix/">Learn Bash</a></li> -->
+					<li><a href="https://learncodethehardway.org/unix/">Learn Bash</a></li>
 				</ul>
 			</section>
-			<!-- End section of File Permissions -->
-			<!-- Begin Section on Piping by @ladycode -->
+			End section of File Permissions
+			Begin Section on Piping by @ladycode
 
-			<!-- RETURN TO
+			 RETURN TO
 			<section>
 				<h2>Back to Commands</h2>
 				<p>You have already learned several commands. Some have switches which cause the command to behave differently.</p>
@@ -576,7 +586,7 @@ $ open -t myfile.txt
 			 I hope you guys enjoyed my contributions!  Best, @ladycode -->
 
 			<section>
-				<h2>GIT</h2>			
+				<h2>Introduction to Version Control and GIT</h2>			
 			</section>
 
 			<section>
@@ -707,23 +717,6 @@ function addThree(num){
 			</section>
 
 			<section>
-				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
-				<ul>
-					<li class="fragment">Can live on a local machine (aka your computer) or on a remote server (like Github!)</li>
-					<li class="fragment">The act of copying a repository from a remote server is called <span style="color:yellow">cloning</span></li>
-					<li class="fragment">Cloning from a remote server allows teams to work together.</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
-				<ul>
-					<li class="fragment">The process of downloading commits that don't exist on your machine from a remote repository is called <span style="color:yellow">pulling</span> changes.</li>
-					<li class="fragment">The process of adding your local changes to the remote repository is called <span style="color:yellow">pushing</span> changes</li>
-					<p class="fragment"><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>	</p>			</ul>
-			</section>
-
-			<section>
 				<h2>Key Concept:<span style="color:yellow">Branches</span></h2>
 				<ul>
 					<li class="fragment">All commits in git live on a branch</li>
@@ -781,12 +774,12 @@ On branch master
 Initial commit
 Untracked files: 
 </code></pre>
-			<p class="fragment">What is this is saying is, "Hey, we noticed you created a new file, but we aren't going to do anything with it until you tell us to add it."</p>
+			<p class="fragment">What this is saying is, "Hey, we noticed you created a new file, but we aren't going to do anything with it until you tell us to add it."</p>
 			</section>
 
 			<section>
 				<h2>Running a commit</h2>
-				<p>To add a file to a comit, you first need to add it to the <span style="color:yellow">staging environment</span>. To go this, you can use the git add command</p>
+				<p>To add a file to a commit, you first need to add it to the <span style="color:yellow">staging environment</span>. To go to this, you can use the git add command</p>
 <pre><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git add index.html 
 </code></pre>
@@ -815,9 +808,9 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit!"
 			</section>
 
 			<section>
-				<h2>Exercise</h2>
-				<p>Do the first nine exercises.<a href="https://try.github.io/levels/1/challenges/1">Github Challenges</a></p>
-				<p>For more information: <a href="http://women2.com/2016/02/09/git-101-for-beginners/?hvid=3PXmn9&utm_source=Women+2.0+Mailing+List&utm_campaign=b06f62550e-08-24-15_Weekly_Newsletter&utm_medium=email&utm_term=0_8e8e6a075d-b06f62550e-310404969">Git 101</a></p>
+				<h2>Exercise</h2><p><a href="https://learn.co/lessons/git-basics-quiz">https://learn.co/lessons/git-basics-quiz</a></p>
+				<p>Read this: <a href="https://women2.com/2016/02/09/20160209git-101-for-beginners/">Git 101</a></p>
+				<img src="images/exercise.gif" alt="Exercise Time"/>
 			</section>
 
 			<section>
@@ -828,8 +821,32 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit!"
 			<section>
 				<h2>Using Awesome GUI Tools</h2>
 				<p>Check out GitKraken!</p>
-				<p>https://www.gitkraken.com/</p>
+				<p><a href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></p>
 			</section>
+
+			<section>
+				<h2>Local vs Remote</h2>
+				<p>You want to be able to collaborate on your code and not just keep the commit on your own local computer. And you want to be able to pull someone else's code.</p>
+				<img src="images/sharing.gif" alt="Pokemon Sharing">
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
+				<ul>
+					<li class="fragment">Can live on a local machine (aka your computer) or on a remote server (like Github!)</li>
+					<li class="fragment">The act of copying a repository from a remote server is called <span style="color:yellow">cloning</span></li>
+					<li class="fragment">Cloning from a remote server allows teams to work together.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
+				<ul>
+					<li class="fragment">The process of downloading commits that don't exist on your machine from a remote repository is called <span style="color:yellow">pulling</span> changes.</li>
+					<li class="fragment">The process of adding your local changes to the remote repository is called <span style="color:yellow">pushing</span> changes</li>
+					<p class="fragment"><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>	</p>			</ul>
+			</section>
+	
 
 			<section>
 				<h2>Github!</h2>
@@ -838,7 +855,7 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit!"
 
 			<section>
 				<h2>What is Github?</h2>
-				<p>www.github.com</p>
+				<p><a href="https://www.github.com">www.github.com</a></p>
 				<ul>
 					<li class="fragment">It is the largest web-based git repository hosting service</li>
 					<li class="fragment">Allows for code collaboration with anyone online</li>
@@ -866,11 +883,18 @@ Lauras-MacBook-Pro:newProject laurahackney$ git pull origin master
 
 			<section>
 				<h2>Fork a Repo!</h2>
+				<img src="images/exercise.gif" alt="Exercise Time"/>
+			</section>
+
+			<section>
+				<h2>Review</h2>
+				<p><a href="https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db">More tools to learn Github</a></p>
 			</section>
 
 			<section>
 				<h2>AC Algorithms</h2>
 				<p>Your first clone!</p>
+				<img src="images/exercise.gif" alt="Exercise Time"/>
 			</section>
 
 		<!-- Last Slide -->
