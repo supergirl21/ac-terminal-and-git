@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -18,13 +19,14 @@
 
 	<!-- Printing and PDF exports -->
 	<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
 </head>
+
 <body>
 	<div class="reveal">
 		<div class="slides">
@@ -35,7 +37,9 @@
 
 			<section>
 				<h2>Learning the Terminal/Command Line and Git Review Study Guide</h2>
-				<p>Click <a href="https://docs.google.com/document/d/1yjFLrNBHdfBkWrTfWkpFpzAEfWhfEbIprQy9X3W1JHc/edit?usp=sharing" target="_blank">here</a> to review.</p>
+				<p>Click <a
+						href="https://docs.google.com/document/d/1yjFLrNBHdfBkWrTfWkpFpzAEfWhfEbIprQy9X3W1JHc/edit?usp=sharing"
+						target="_blank">here</a> to review.</p>
 			</section>
 
 			<section>
@@ -61,18 +65,47 @@
 				<h2>What is a Shell?</h2>
 				<p class="fragment">A text-based command interpreter</p>
 				<p class="fragment">The most common shell (and default on OS X) is BASH</p>
-				<p class="fragment">For OS X, use a shell via the “Terminal” app</p>
-			</section>
+				<p class="fragment">For OS X, use a shell via the “Terminal” app</p> 
+			 </section>
 
 			<section>
 				<h2>What is the Terminal?</h2>
 				<p>The terminal is an interface in which you can type and execute text based commands.</p>
 				<p class="fragment">This is how we access our Command Line Interface (CLI).</p>
-			</section>
+			  </section>
 
 			<section>
 				<h2>What is the Terminal?</h2>
 				<img src="images/terminal.png" alt="Terminal Image">
+			</section>
+
+			<section>
+				<h2>What is the Terminal?</h2>
+				<p>The terminal is the original interface computers, before the invention of the GUI</p>	
+				<p>All commands, folder & directory creation, as well as application installations were all done in the terminal.</p>		
+			</section>
+
+			<section>
+				<h2>What is the Terminal?</h2>
+				<p>Here is how you would create new folders</p>
+				
+					<img data-enlargable 
+						height="300" 
+						style="border: 5px solid blue; cursor: zoom-in;" 
+						src="images/create-folder-termina.png" alt="Screenshot of creating folders in the terminal">
+			</section>
+
+			<section>
+				<h2>What is the Terminal?</h2>
+				<p>Here are the new folders shown in the GUI</p>				
+					<img data-enlargable 
+					height="300" 
+					style="border: 5px solid blue; cursor: zoom-in; height: 150px" src="images/new-folders-created-in-terminal-shown-in-gui.png" alt="Image showing same folders in the GUI">	
+			</section>
+
+			<section>
+				<h2>What is the Terminal?</h2>
+				<p>Let's watch a live example!</p>
 			</section>
 
 			<section>
@@ -117,22 +150,28 @@
 				<p>Containers for files or other directories.</p>
 				<p>Also referred to as "folders".</p>
 				<p>Nested files and directories can be referenced using paths.</p>
+				<p>Who remembers the difference between absolute and relative paths?</p>
 			</section>
-			
+
 			<section>
 				<h2>Server OS</h2>
 				<img src="images/unixtree.png" alt="History of Servers">
+				<p>Explain this relative path:<pre><code class="js" data-trim contenteditable>/unix/BSD/freeBSD</code></pre></p>
+				
 			</section>
 
 			<section>
 				<h2>UNIX File System</h2>
-				<p>You don't need to be an expert on the UNIX system, but it is helpful to have a deeper understanding of how your computer is configured.</p>
+				<p>You don't need to be an expert on the UNIX system, but it is helpful to have a deeper understanding
+					of how your computer is configured.</p>
 				<p>It will also help you get out of trouble in your Terminal!</p>
 			</section>
 
-			<section>	
+			<section>
 				<h2>UNIX File System</h2>
-				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;" src="images/unix-file-system-mac.png" alt="Unix File System" style="height: 35vh">
+				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;"
+					src="images/unix-file-system-mac.png" alt="Unix File System" style="height: 35vh">
+				<p>Take a few minutes and write the relative path starting at 'carol' and ending at 'Library'</p>
 			</section>
 
 			<section>
@@ -144,7 +183,8 @@
 					<li class="fragment">/tmp: Temporary files</li>
 					<li class="fragment">/usr: Regular user tools</li>
 					<li class="fragment">/usr/local: Installed user software</li>
-					<li class="fragment">/var: Data used by system</li></li>
+					<li class="fragment">/var: Data used by system</li>
+					<li class="fragment">Let's check out some live examples!</li>
 				</ul>
 			</section>
 
@@ -152,28 +192,32 @@
 			<section>
 				<h2>Unix Filesystem</h2>
 				<p>In Unix, files are contained in directories which are organized in an “upside
-down tree” structure like the one shown below. The topmost directory is named “root” and represented by the single character ‘/’ known as the “front slash”.</p>
-				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;" src="images/systemPic.png" style="height: 35vh" />
+					down tree” structure like the one shown below. The topmost directory is named “root” and represented
+					by the single character ‘/’ known as the “front slash”.</p>
+				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;"
+					src="images/systemPic.png" style="height: 35vh" />
 			</section>
 
-			<section>	
+			<section>
 				<h2>Unix Filesystem</h2>
 				<p>Let's watch <a href="https://www.youtube.com/watch?v=PEmi550E7zw" target="_blank">this</a> video</p>
 			</section>
 
-			<section>	
-				<h2>Understanding ther Terminal</h2>
-				<p>Let's watch the first 10 minutes of <a href="https://www.youtube.com/watch?v=FfT8OfMpARM" target="_blank">this</a> video</p>
+			<section>
+				<h2>Understanding the Terminal</h2>
+				<p>Let's watch the first 10 minutes of <a href="https://www.youtube.com/watch?v=FfT8OfMpARM"
+						target="_blank">this</a> video</p>
 			</section>
 
 			<section>
 				<h2>The command for changing directories</h2>
 				<code>cd</code>
 				<p><code>cd</code> means "change directory."</p>
-			<p>Without a command line argument (CLA*), <code>cd</code> switches to your home directory (computername:~ username) no matter where you are in the file system.</p> 
-				<p>*A CLA is the list of words that proceed the command. 
+				<p>Without a command line argument (CLA*), <code>cd</code> switches to your home directory
+					(computername:~ username) no matter where you are in the file system.</p>
+				<p>*A CLA is the list of words that proceed the command.
 				</p>
-				
+
 			</section>
 
 			<section>
@@ -189,49 +233,49 @@ down tree” structure like the one shown below. The topmost directory is named 
 					<li class="fragment" style="list-style-type: none;"> -> <code>cd ~/exampleDir</code></li>
 				</ul>
 			</section>
-		
+
 			<section>
 				<h2>Practice I</h2>
 				<img src="images/systemPic.png" style="height: 40vh" />
 				<div style="font-size: .5em">
-				<table>
-					<tr>
-						<td width="20%">current working directory</td>
-						<td width="20%">cd command using absolute path</td>
-						<td width="20%">cd command using relative path</td>
-						<td width="20%">new working directory</td>
-					</tr>
-					<tr>
-						<td>/home/bob</td>
-						<td class="fragment"><code style="font-size:1em" >cd /home/bob/class</code></td>
-						<td class="fragment"><code style="font-size:1em" >cd ./class</code></td>
-						<td>/home/bob/class</td>
-					</tr>
-				</table>
-				<aside class="notes"> The answers fill in as you click right.</aside>
+					<table>
+						<tr>
+							<td width="20%">current working directory</td>
+							<td width="20%">cd command using absolute path</td>
+							<td width="20%">cd command using relative path</td>
+							<td width="20%">new working directory</td>
+						</tr>
+						<tr>
+							<td>/home/bob</td>
+							<td class="fragment"><code style="font-size:1em">cd /home/bob/class</code></td>
+							<td class="fragment"><code style="font-size:1em">cd ./class</code></td>
+							<td>/home/bob/class</td>
+						</tr>
+					</table>
+					<aside class="notes"> The answers fill in as you click right.</aside>
 				</div>
-				
+
 			</section>
 			<section>
 				<h2>Practice II</h2>
 				<img src="images/systemPic.png" style="height: 40vh" />
 				<div style="font-size: .5em">
-				<table>
-					<tr>
-						<td width="20%">current working directory</td>
-						<td width="20%">cd command using absolute path</td>
-						<td width="20%">cd command using relative path</td>
-						<td width="20%">new working directory</td>
-					</tr>
-					<tr>
-						<td>/home/bob</td>
-						<td class="fragment"><code style="font-size:1em">cd /home/mary/temp</code></td>
-						<td class="fragment"><code style="font-size:1em">cd ../mary/temp</code></td>
-						<td>/home/mary/temp</td>
-					</tr>
-				</table>
+					<table>
+						<tr>
+							<td width="20%">current working directory</td>
+							<td width="20%">cd command using absolute path</td>
+							<td width="20%">cd command using relative path</td>
+							<td width="20%">new working directory</td>
+						</tr>
+						<tr>
+							<td>/home/bob</td>
+							<td class="fragment"><code style="font-size:1em">cd /home/mary/temp</code></td>
+							<td class="fragment"><code style="font-size:1em">cd ../mary/temp</code></td>
+							<td>/home/mary/temp</td>
+						</tr>
+					</table>
 				</div>
-				
+
 			</section>
 			<!-- <section>
 				<h2>UNIX File System Exercises</h2>
@@ -241,7 +285,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 				</div>
 				
 			</section> -->
-	<!-- end section of UNIX File System -->
+			<!-- end section of UNIX File System -->
 
 			<section>
 				<h2>Understanding Paths</h2>
@@ -250,6 +294,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 					<li>Parent Directory: (..)</li>
 					<li>Home Directory: (~)</li>
 					<li>Root Directory: (/)</li>
+					<li>Let's check out some live examples!</li>
 				</ul>
 			</section>
 
@@ -274,11 +319,14 @@ down tree” structure like the one shown below. The topmost directory is named 
 					</tr>
 					<tr class="fragment">
 						<td><code>touch</code></td>
-						<td>Create or update an existing file's timestamp. The touch command expects the name of your new file as an argument.</td>
+						<td>Create or update an existing file's timestamp. The touch command expects the name of your
+							new file as an argument.</td>
 					</tr>
 					<tr class="fragment">
 						<td><code>mv</code></td>
-						<td>Move a file from one place to another. See <a href="https://support.apple.com/guide/terminal/move-and-copy-files-apddfb31307-3e90-432f-8aa7-7cbc05db27f7/mac" target="_blank">Docs</a>.</td>
+						<td>Move a file from one place to another. See <a
+								href="https://support.apple.com/guide/terminal/move-and-copy-files-apddfb31307-3e90-432f-8aa7-7cbc05db27f7/mac"
+								target="_blank">Docs</a>.</td>
 					</tr>
 					<tr class="fragment">
 						<td><code>rm</code></td>
@@ -290,6 +338,11 @@ down tree” structure like the one shown below. The topmost directory is named 
 					</tr>
 				</table>
 			</section>
+				
+			<section>
+				<h2>Common Commands in Terminal</h2>
+				<p>Bookmark <a href="https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/" target="_blank">this </a> cheatsheet!</p>
+			</section>
 
 			<section>
 				<h2>Flags</h2>
@@ -300,7 +353,7 @@ down tree” structure like the one shown below. The topmost directory is named 
 				<p><code>ls -l</code> = use a “long list” format (shows more verbose output)</p>
 			</section>
 
-			<section> 
+			<section>
 				<h2>Terminal Commands</h2>
 				<ul>
 					<li class="fragment">The left/right arrow keys let you edit within a command
@@ -308,15 +361,16 @@ down tree” structure like the one shown below. The topmost directory is named 
 					<li class="fragment">CTRL+a goes to beginning of command, CTRL+e to the end.
 					<li class="fragment">The tab auto-completes file names! Best friend!
 				</ul>
-     		</section>
+			</section>
 
-			 <section>
-				 <h2>Making and Removing Directories</h2>
-				 <p>Use the <code style="color: aqua;">mkdir</code> command to create a new empty directory.</p>
-				 <p>Use the <code style="color: aqua;">rmdir</code> command to remove an empty directory.</p>
-				 <p>Use <code style="color: aqua;">rm -r</code> to remove a non-empty directory...be careful!</p>
-				 <p>All 3 commands expect the name of a directory as an argument.</p>
-			 </section>
+			<section>
+				<h2>Making and Removing Directories</h2>
+				<p>Use the <code style="color: aqua;">mkdir</code> command to create a new empty directory.</p>
+				<p>Use the <code style="color: aqua;">rmdir</code> command to remove an empty directory.</p>
+				<p>Use <code style="color: aqua;">rm -r</code> to remove a non-empty directory...be careful!</p>
+				<p>All 3 commands expect the name of a directory as an argument.</p>
+				<p>Let's check this out in both terminal and the finder open next to each other!</p>
+			</section>
 
 			<section>
 				<h2>Command Line Project</h2>
@@ -327,14 +381,16 @@ down tree” structure like the one shown below. The topmost directory is named 
 					<li>Add a new index.html file</li>
 				</ul>
 				<img src="images/exercise.gif" alt="Exercise time" />
-				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript" target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript"
+					target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
 			</section>
-			
+
 			<section>
 				<h2>Command Line to Open Visual Studio Code</h2>
 				<p>Try this! Type this into Terminal:</p>
 				<pre><code class="js" data-trim contenteditable>open -a "Visual Studio Code"</code></pre>
-				<p class="fragment">Now look over <a href="https://code.visualstudio.com/docs/setup/mac" target="_blank">this documentation</a> to install a shell command in Visual Studio Code.</p>
+				<p class="fragment">Now look over <a href="https://code.visualstudio.com/docs/setup/mac"
+						target="_blank">this documentation</a> to install a shell command in Visual Studio Code.</p>
 				<p class="fragment">Quit out of Visual Studio Code.</p>
 				<p class="fragment">Then in Terminal, type "code" and press return. What happens?</p>
 			</section>
@@ -582,9 +638,9 @@ $ open -t myfile.txt
 		-->
 			<!-- End of section on piping -->
 			<!--Begin section on working remotely with ssh and scp by @ladycode -->
-			
+
 			<!-- Create a new curriculum module: advanced command line and ssh -->
-			
+
 			<!--
 			<section>
 				<h2>Working Remotely</h2>
@@ -639,7 +695,7 @@ $ open -t myfile.txt
 			 I hope you guys enjoyed my contributions!  Best, @ladycode -->
 
 			<section>
-				<h2>Introduction to Version Control and GIT</h2>			
+				<h2>Introduction to Version Control and GIT</h2>
 			</section>
 
 			<section>
@@ -650,19 +706,26 @@ $ open -t myfile.txt
 					<li class="fragment">Allows for collaborative development.</li>
 					<li class="fragment">Allows you to know who made what changes and when.</li>
 					<li class="fragment">Allows you to revert any changes and go back to a previous state.</li>
+					<li class="fragment">Let's see version control in action in an AnnieCannons Google Doc!</li>
 				</ul>
 			</section>
 
 			<section>
+				<h2>Version Control on dev projects</h2>
+				<img src="images/dev-branch-version-control.png" alt="visual of version control">
+			</section>
+
+
+			<section>
 				<h2>Example Flow</h2>
 				<p>Alice creates this code and commits it as version 0:</p>
-<pre><code class="js" data-trim contenteditable>
+				<pre><code class="js" data-trim contenteditable>
 function addTwo(num){
 	return num + 2;
 }
 </code></pre>
 				<p class="fragment">Alice edits and commits as version 1:</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 function addThree(num){
 	return num + 3;
 }
@@ -672,7 +735,7 @@ function addThree(num){
 			<section>
 				<h2>Example flow 2</h2>
 				<p>Bob pulls the code from version 0 and edits:</p>
-<pre><code class="js" data-trim contenteditable>
+				<pre><code class="js" data-trim contenteditable>
 function addTwo(num){
 	if (num === Infinity){
 		alert("Cannot add to infinity!");
@@ -681,7 +744,7 @@ function addTwo(num){
 }
 </code></pre>
 				<p class="fragment">Bob pulls Alice's changes and it merges them:</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 function addThree(num){
 	if (num === Infinity){
 		alert("Cannot add to infinity!");
@@ -694,20 +757,25 @@ function addThree(num){
 			<section>
 				<h2>Version Control</h2>
 				<p>Version control systems are categorized as either "centralized" or "distributed."</p>
-				<p class="fragment"><span style="color: yellow">Centralized version control systems </span>are based on the idea that there is a single "central" copy of your project somewhere (probably on a server), and programmers will "commit" their changes to this central copy.</p>
-				<p class="fragment">In <span style="color: yellow">distributed systems</span>, every developer "clones" a copy of a repository and has the full history of the project on their own hard drive.</p>
+				<p class="fragment"><span style="color: yellow">Centralized version control systems </span>are based on
+					the idea that there is a single "central" copy of your project somewhere (probably on a server), and
+					programmers will "commit" their changes to this central copy.</p>
+				<p class="fragment">In <span style="color: yellow">distributed systems</span>, every developer "clones"
+					a copy of a repository and has the full history of the project on their own hard drive.</p>
 			</section>
 
 			<section>
 				<h2>Centralized vs distributed systems</h2>
-				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;" src="images/versioncontrol.png" alt="Central vs Distributed Systems">
+				<img data-enlargable height="300" style="border: 5px solid blue; cursor: zoom-in;"
+					src="images/versioncontrol.png" alt="Central vs Distributed Systems">
 			</section>
 
 			<section>
 				<h2>What is Git?</h2>
 				<p class="fragment">Git is a popular version control system!</p>
 				<p class="fragment">Other systems exist. However, Git is considered by many to be the best.</p>
-				<p class="fragment">Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes.</p>
+				<p class="fragment">Git allows groups of people to work on the same documents (often code) at the same
+					time, and without stepping on each other's toes.</p>
 			</section>
 
 			<section>
@@ -722,14 +790,16 @@ function addThree(num){
 			<section>
 				<h2>Install Git</h2>
 				<img src="images/git-logo.png" alt="git logo">
-				<p>Reference this 
-				<a href="https://docs.google.com/document/d/1KEmo0oMhdzYX0uZAusU1kf1Sd83LfsmbxykS0n56NPw/edit?usp=sharing" target="_blank">Git Setup Guide</a>.</p>
+				<p>Reference this
+					<a href="https://docs.google.com/document/d/1KEmo0oMhdzYX0uZAusU1kf1Sd83LfsmbxykS0n56NPw/edit?usp=sharing"
+						target="_blank">Git Setup Guide</a>.</p>
 			</section>
 
 			<section>
 				<h2>How does Git work?</h2>
 				<p class="fragment">There are a few key concepts. No need to worry. You will get them over time!</p>
-				<p class="fragment">Important GIT terms in the following slides will be in <span style="color:yellow">yellow</span>.</p>
+				<p class="fragment">Important GIT terms in the following slides will be in <span
+						style="color:yellow">yellow</span>.</p>
 				<img src="https://media.tenor.co/images/4d46caa0ab53ae04ce457eba29721f19/raw" alt="" class="fragment">
 			</section>
 
@@ -762,8 +832,10 @@ function addThree(num){
 				<p>Commits contain three pieces of information.</p>
 				<ol>
 					<li class="fragment">Information about how the files changed from previously</li>
-					<li class="fragment">A reference to the commit that came before it (this is called the parent commit)</li>
-					<li class="fragment">A hashcode name (this will look something like: fb2dec48987dfgdf8798dfg7dfg87dfg79sdsfsdf7sdf78h9n</li>
+					<li class="fragment">A reference to the commit that came before it (this is called the parent
+						commit)</li>
+					<li class="fragment">A hashcode name (this will look something like:
+						fb2dec48987dfgdf8798dfg7dfg87dfg79sdsfsdf7sdf78h9n</li>
 				</ol>
 			</section>
 
@@ -782,33 +854,39 @@ function addThree(num){
 				<ul>
 					<li class="fragment">All commits in Git live on a branch</li>
 					<li class="fragment">But there can be many many branches</li>
-					<li class="fragment">The main branch in a project is called the <span style="color:yellow">master </span> branch.</li>
+					<li class="fragment">The main branch in a project is called the <span style="color:yellow">master
+						</span> branch.</li>
 				</ul>
 			</section>
 
 			<section>
 				<h2>Getting Started</h2>
-				<p class="fragment">You can create repositories that are version controlled on your own computer. These are called local repositories.</p>
-				<p class="fragment">The cool thing about distributed systems is that this repo acts the same way as if it were a remote repo.</p>
+				<p class="fragment">You can create repositories that are version controlled on your own computer. These
+					are called local repositories.</p>
+				<p class="fragment">The cool thing about distributed systems is that this repo acts the same way as if
+					it were a remote repo.</p>
 			</section>
 
 			<section>
 				<h2>Creating a local repository</h2>
-				<p class="fragment">When creating a new project on your local machine using Git, you will first create a new repository.</p>
+				<p class="fragment">When creating a new project on your local machine using Git, you will first create a
+					new repository.</p>
 				<p class="fragment">To use Git, we will use Terminal.</p>
-				<p class="fragment">To begin, open Terminal, and move to where you want to place your project on your local machine using the <code style="color: aqua;">cd</code> (change directory) command. </p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<p class="fragment">To begin, open Terminal, and move to where you want to place your project on your
+					local machine using the <code style="color: aqua;">cd</code> (change directory) command. </p>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:~ laurahackney$ cd Documents
 Lauras-MacBook-Pro:~ laurahackney$ cd dev
 Lauras-MacBook-Pro:~ laurahackney$ mkdir newProject
 Lauras-MacBook-Pro:~ laurahackney$ cd newProject
-</code></pre>	
+</code></pre>
 			</section>
 
 			<section>
 				<h2>Creating a local repository</h2>
-				<p>To initialize a Git repository in the root of the folder, run the <code style="color: aqua;">git init</code> command.</p>
-<pre><code class="js" data-trim contenteditable>
+				<p>To initialize a Git repository in the root of the folder, run the <code
+						style="color: aqua;">git init</code> command.</p>
+				<pre><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git init
 
 Initialized empty Git repository in /Users/laurahackney/Documents/dev/newProject
@@ -817,38 +895,46 @@ Initialized empty Git repository in /Users/laurahackney/Documents/dev/newProject
 
 			<section>
 				<h2>Add a new File to the Repo</h2>
-				<p>Go ahead and add a new file to the project by running a <code style="color: aqua;">touch</code> command.</p>
-<pre><code class="js" data-trim contenteditable>
+				<p>Go ahead and add a new file to the project by running a <code style="color: aqua;">touch</code>
+					command.</p>
+				<pre><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ touch index.html
 Lauras-MacBook-Pro:newProject laurahackney$ ls
 </code></pre>
-				<p class="fragment">Once you have added or modified files in a folder containing a Git repo, Git will notice that changes have been made inside the repo.</p>
-				<p class="fragment">However, for Git to officially keep track of the file (that is, put it in a commit), you will need to tell it to do so.</p>
+				<p class="fragment">Once you have added or modified files in a folder containing a Git repo, Git will
+					notice that changes have been made inside the repo.</p>
+				<p class="fragment">However, for Git to officially keep track of the file (that is, put it in a commit),
+					you will need to tell it to do so.</p>
 				<p class="fragment">We can even do this in Visual Studio Code! More on that later.</p>
 			</section>
 
 			<section>
 				<h2>Git status check</h2>
-				<p>After creating the new file, you can use the <code style="color: aqua;">git status</code> command to see which files Git knows exist.</p>
-<pre><code class="js" data-trim contenteditable>
+				<p>After creating the new file, you can use the <code style="color: aqua;">git status</code> command to
+					see which files Git knows exist.</p>
+				<pre><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git status
 On branch master
 Initial commit
 Untracked files: 
 </code></pre>
-			<p class="fragment">What this is saying is, "Hey, we noticed you created a new file, but we aren't going to do anything with it until you tell us to add it."</p>
+				<p class="fragment">What this is saying is, "Hey, we noticed you created a new file, but we aren't going
+					to do anything with it until you tell us to add it."</p>
 			</section>
 
 			<section>
 				<h2>Running a commit</h2>
-				<p>To add a file to a commit, you first need to add it to the <span style="color:yellow">staging environment</span> by using the <code style="color: aqua;">git add</code> command.</p>
-<pre><code class="js" data-trim contenteditable>
+				<p>To add a file to a commit, you first need to add it to the <span style="color:yellow">staging
+						environment</span> by using the <code style="color: aqua;">git add</code> command.</p>
+				<pre><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git add index.html 
 </code></pre>
-				<p class="fragment">Once you've used the <code style="color: aqua;">git add</code> command to add all the files you want to the staging environment, you can then tell Git to package them into a commit using the <code style="color: aqua;">git commit</code> command.</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<p class="fragment">Once you've used the <code style="color: aqua;">git add</code> command to add all
+					the files you want to the staging environment, you can then tell Git to package them into a commit
+					using the <code style="color: aqua;">git commit</code> command.</p>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit"
-</code></pre>	
+</code></pre>
 				<p class="fragment">Check your work with the <code style="color: aqua;">git log</code> command.</p>
 			</section>
 
@@ -865,15 +951,21 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit"
 
 			<section>
 				<h2>Review</h2>
-				<p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" target="_blank">Setting up a Repo</a></p>
-				<p><a href="https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db" target="_blank">More tools to learn Github</a></p>
+				<p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" target="_blank">Setting up
+						a Repo</a></p>
+				<p><a href="https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db"
+						target="_blank">More tools to learn Github</a></p>
 			</section>
 
 			<section>
-				<h2>Exercise</h2><p>Take this <a href="https://learn.co/lessons/git-basics-quiz" target="_blank">quiz</a> and turn in a screenshot.</p>
-				<p>Then read this article on <a href="https://women2.com/2016/02/09/20160209git-101-for-beginners/">Git 101</a>.</p>
-				<img src="images/exercise.gif" alt="Exercise Time"/>
-				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript" target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+				<h2>Exercise</h2>
+				<p>Take this <a href="https://learn.co/lessons/git-basics-quiz" target="_blank">quiz</a> and turn in a
+					screenshot.</p>
+				<p>Then read this article on <a href="https://women2.com/2016/02/09/20160209git-101-for-beginners/">Git
+						101</a>.</p>
+				<img src="images/exercise.gif" alt="Exercise Time" />
+				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript"
+					target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
 			</section>
 
 			<section>
@@ -894,15 +986,18 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit"
 
 			<section>
 				<h2>Local vs Remote</h2>
-				<p>You want to be able to collaborate on your code and not just keep the commit on your local computer. And you want to be able to pull someone else's code.</p>
+				<p>You want to be able to collaborate on your code and not just keep the commit on your local computer.
+					And you want to be able to pull someone else's code.</p>
 				<img src="images/sharing.gif" alt="Pokemon Sharing">
 			</section>
 
 			<section>
 				<h2>Key Concept: <span style="color:yellow">Repository</span></h2>
 				<ul>
-					<li class="fragment">Can live on a local machine (aka your computer) or on a remote server (like Github!)</li>
-					<li class="fragment">The act of copying a repository from a remote server is called <span style="color:yellow">cloning</span>.</li>
+					<li class="fragment">Can live on a local machine (aka your computer) or on a remote server (like
+						Github!)</li>
+					<li class="fragment">The act of copying a repository from a remote server is called <span
+							style="color:yellow">cloning</span>.</li>
 					<li class="fragment">Cloning from a remote server allows teams to work together.</li>
 				</ul>
 			</section>
@@ -910,16 +1005,19 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit"
 			<section>
 				<h2>Key Concept: <span style="color:yellow">Repository</span></h2>
 				<ul>
-					<li class="fragment">The process of downloading commits that don't exist on your machine from a remote repository is called <span style="color:yellow">pulling</span> changes.</li>
-					<li class="fragment">The process of adding your local changes to the remote repository is called <span style="color:yellow">pushing</span> changes.</li>
-					<p class="fragment"><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>	</p>		
-				</ul>	
+					<li class="fragment">The process of downloading commits that don't exist on your machine from a
+						remote repository is called <span style="color:yellow">pulling</span> changes.</li>
+					<li class="fragment">The process of adding your local changes to the remote repository is called
+						<span style="color:yellow">pushing</span> changes.</li>
+					<p class="fragment"><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU"
+							frameborder="0" allowfullscreen></iframe> </p>
+				</ul>
 			</section>
-	
+
 
 			<section>
 				<h2>Github!</h2>
-				<img src="images/codercat.jpg" width= "500px" alt="Github Octocat">
+				<img src="images/codercat.jpg" width="500px" alt="Github Octocat">
 			</section>
 
 			<section>
@@ -936,15 +1034,15 @@ Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit"
 			<section>
 				<h2>Using Remote Repos</h2>
 				<p class="fragment">To synchronize with a remote repository, tell Git about it.</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git remote add origin git://github.com/username/repo
 </code></pre>
 				<p class="fragment">To push changes, use <code style="color: aqua;">git push</code></p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git push origin master
 </code></pre>
 				<p class="fragment">To pull changes, use <code style="color: aqua;">git pull</code></p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
+				<pre class="fragment"><code class="js" data-trim contenteditable>
 Lauras-MacBook-Pro:newProject laurahackney$ git pull origin master
 </code></pre>
 				<p class="fragment">OR! Use Git Kraken!!</p>
@@ -953,66 +1051,74 @@ Lauras-MacBook-Pro:newProject laurahackney$ git pull origin master
 			<section>
 				<h2>Fork a Repo!</h2>
 				<p>Search Github for a repo to fork.</p>
-				<img src="images/exercise.gif" alt="Exercise Time"/>
+				<img src="images/exercise.gif" alt="Exercise Time" />
 				<br>
-				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript" target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+				<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript"
+					target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
 			</section>
 
 			<section>
 				<h2>Review</h2>
-				<p><a href="https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db">More tools to learn Github</a></p>
+				<p><a href="https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db">More tools
+						to learn Github</a></p>
 			</section>
 
 			<section>
 				<h2>AC Algorithms</h2>
 				<p>For this exercise, we will:
-				<div style="float: right; width: 83%;">
-					<ol>
-						<li>First, search for AnnieCannons' Github repository.</li>
-						<li>Second, fork the ac-algorithms repository.</li>
-						<li>Third, find the forked repository in your profile's repositories to clone.</li>
-						<li>Fourth, you will be working through the files in your local repo.</li>
-						<li>Finally, you will commit and push those changes to your remote repo.</li>
-					</ol>
-					<p>Click <a href="https://docs.google.com/document/d/1vZkSMkEls4S7X3i3Odmt1zP7oqmt1W__RBCyesy-dKg/edit?usp=sharing" target="_blank">here</a> for the instructions.</p>
-					<p>🎉 Your first clone! 🎊</p>
-				</div>
-				<div style="float: left; width: 15%;">
-					<img src="images/exercise.gif" alt="Exercise Time"/>
-					<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript" target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
-				</div>
+					<div style="float: right; width: 83%;">
+						<ol>
+							<li>First, search for AnnieCannons' Github repository.</li>
+							<li>Second, fork the ac-algorithms repository.</li>
+							<li>Third, find the forked repository in your profile's repositories to clone.</li>
+							<li>Fourth, you will be working through the files in your local repo.</li>
+							<li>Finally, you will commit and push those changes to your remote repo.</li>
+						</ol>
+						<p>Click <a
+								href="https://docs.google.com/document/d/1vZkSMkEls4S7X3i3Odmt1zP7oqmt1W__RBCyesy-dKg/edit?usp=sharing"
+								target="_blank">here</a> for the instructions.</p>
+						<p>🎉 Your first clone! 🎊</p>
+					</div>
+					<div style="float: left; width: 15%;">
+						<img src="images/exercise.gif" alt="Exercise Time" />
+						<a href="https://trello.com/b/RQrD5Ye2/template-student-journey-phase-24-javascript"
+							target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+					</div>
 			</section>
 
 			<section>
 				<h2>Learning the Terminal/Command Line and Git Roundup</h2>
-				<p>Click <a href="https://docs.google.com/document/d/1yjFLrNBHdfBkWrTfWkpFpzAEfWhfEbIprQy9X3W1JHc/edit?usp=sharing" target="_blank">here</a> to review.</p>
+				<p>Click <a
+						href="https://docs.google.com/document/d/1yjFLrNBHdfBkWrTfWkpFpzAEfWhfEbIprQy9X3W1JHc/edit?usp=sharing"
+						target="_blank">here</a> to review.</p>
 			</section>
 
-		<!-- Last Slide -->
-		<section style="text-align: left;">
-			<h1>THE END</h1>
-			<p>Thank you for your attention!</p>
-		</section>
+			<!-- Last Slide -->
+			<section style="text-align: left;">
+				<h1>THE END</h1>
+				<p>Thank you for your attention!</p>
+			</section>
+		</div>
 	</div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="js/zoomin.js"></script>
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/zoomin.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-<script>
-// More info https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-	history: true,
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
 
-	// More info https://github.com/hakimel/reveal.js#dependencies
-	dependencies: [
-		{ src: 'plugin/markdown/marked.js' },
-		{ src: 'plugin/markdown/markdown.js' },
-		{ src: 'plugin/notes/notes.js', async: true },
-		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-	]
-});
-</script>
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
 </body>
+
 </html>
